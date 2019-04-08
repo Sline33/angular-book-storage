@@ -3,5 +3,16 @@
     <h2><i class="material-icons">account_circle</i>S'enregistrer</h2>
 </div>
 <div class="row-content">
-  <p>signup works !</p>
+  <form class="example-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="text" id="email" matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" id="password" matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
+    <button  mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">Créer mon compte</button>
+  </form>
+  <p class="text-danger">{{ errorMessage }}</p>
 </div>

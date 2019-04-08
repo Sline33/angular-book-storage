@@ -10,6 +10,8 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -44,7 +46,9 @@ import { BooksService } from './services/books.service';
     MatCheckboxModule,
     MatGridListModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [
     AuthGuardService,
