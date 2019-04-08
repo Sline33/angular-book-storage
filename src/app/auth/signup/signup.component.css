@@ -1,0 +1,19 @@
+
+.row-title {
+    padding: 50px 0 1px 50px;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 12px;
+
+}
+.row-title h2 {
+    font-weight: 100;
+    line-height: 24px;
+}
+.row-title h2 i {
+    float: left;
+    margin-right: 4px;
+}
+.row-content {
+    padding: 25px;
+}

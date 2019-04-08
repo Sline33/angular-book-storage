@@ -1,3 +1,14 @@
-<p>
-  header works!
-</p>
+<div class="nav">
+  <div class="left">
+    <button mat-button [matMenuTriggerFor]="aboveMenu">Biblihotéque</button>
+    <mat-menu #aboveMenu="matMenu">
+      <button mat-menu-item routerLink="books">Livres</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  <div class="right">
+    <button mat-button routerLink="auth/signup">Créer un compte</button>
+
+    <button mat-button routerLink="auth/signin">Connexion</button>
+  </div>
+</div>
