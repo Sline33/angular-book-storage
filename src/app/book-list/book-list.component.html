@@ -1,7 +1,18 @@
 
 <div class="row-title">
-  <h2><i class="material-icons">book</i>Les Livres</h2>
+  <h2><i class="material-icons">book</i>Vos Livres</h2>
 </div>
 <div class="row-content">
-  <p>books-list works !</p>
+  <div class="my-book">
+    <button mat-stroked-button *ngFor="let book of books; let i = index" (click)="onViewBook(i)">
+      <h3>
+        {{ book.title }}
+        <button mat-raised-button color="warn" (click)="onDeleteBook(book)">
+          <span><i class="material-icons">delete_forever</i></span>
+        </button>
+      </h3>
+      <p>{{ book.author }}</p>
+    </button>
+  </div>
+  <button mat-raised-button color="primary" (click)="onNewBook()">Nouveau livre</button>
 </div>
