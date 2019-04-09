@@ -37,7 +37,7 @@ export class BooksService {
   getSingleBook(id: number) {
     return new Promise(
       (resolve, reject) => {
-        firebase.database().ref('/books' + id).once('value').then(
+        firebase.database().ref('/books/' + id).once('value').then(
           (data: DataSnapshot) => {
             resolve(data.val());
           },
@@ -56,7 +56,7 @@ export class BooksService {
   }
 
   removeBook(book: Book) {
-    const bookIndexToRemove =this.books.findIndex(
+    const bookIndexToRemove = this.books.findIndex(
       (bookEl) => {
         if(bookEl === book) {
           return true;

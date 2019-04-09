@@ -1,3 +1,9 @@
-<p>
-  single-book works!
-</p>
+
+<div class="row-title">
+    <h1>{{ book.title }}</h1>
+</div>
+<button mat-raised-button class="btn-back" (click)="onBack()">Retour</button>
+<div class="row-content">
+    <h3>{{ book.author }}</h3>
+    <p>{{ book.synopsis }}</p>
+</div>

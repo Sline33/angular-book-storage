@@ -17,3 +17,8 @@
 .row-content {
     padding: 25px;
 }
+.btn-add {
+    position: absolute;
+    right: 25px;
+    top: 125px;
+}
