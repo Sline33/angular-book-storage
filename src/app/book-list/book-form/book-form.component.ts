@@ -59,5 +59,9 @@ export class BookFormComponent implements OnInit {
     this.onUploadFile(event.target.files[0]);
   }
 
+  onBack() {
+    this.router.navigate(['/books']);
+  }
+
 }
 
