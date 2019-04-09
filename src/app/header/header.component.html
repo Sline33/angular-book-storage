@@ -7,8 +7,9 @@
     </mat-menu>
   </div>
   <div class="right">
-    <button mat-button routerLink="auth/signup">Créer un compte</button>
+    <button mat-button routerLink="auth/signup" *ngIf="!isAuth">Créer un compte</button>
+    <button mat-button routerLink="auth/signin" *ngIf="!isAuth">Connexion</button>
 
-    <button mat-button routerLink="auth/signin">Connexion</button>
+    <button mat-button (click)="onSignOut()" *ngIf="isAuth">Déconnexion</button>
   </div>
 </div>
