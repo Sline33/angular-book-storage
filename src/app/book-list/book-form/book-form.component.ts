@@ -55,7 +55,7 @@ export class BookFormComponent implements OnInit {
     );
   }
 
-  detectFiles(event) {
+  detectFiles(event: { target: { files: File[]; }; }) {
     this.onUploadFile(event.target.files[0]);
   }
 

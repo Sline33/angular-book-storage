@@ -6,7 +6,6 @@ import { Book } from '../models/book.model';
 import * as firebase from 'firebase';
 
 import DataSnapshot = firebase.database.DataSnapshot;
-import { resolve, reject } from 'q';
 
 @Injectable({
   providedIn: 'root'
@@ -95,7 +94,7 @@ export class BooksService {
             reject();
           },
           () => {
-            resolve(upload.snapshot.downloadURL);
+            resolve(upload.snapshot.ref.getDownloadURL());
           }
         );
       }
